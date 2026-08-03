@@ -7,14 +7,14 @@ int main() {
   for(int i = 0; i < n; i++) {
     matrix[i] = (int*) malloc(n * sizeof(int));
     for(int j = 0; j < n; j++)
-    scanf("%d", &matrix[i][j]);
+        scanf("%d", &matrix[i][j]);
   }
 
   for(int i = 1; i < n; i++){
     for(int j = 0; j < i; j++){
       if(matrix[i][j] != 0){
-    isUpper = 0;
-    break;
+        isUpper = 0;
+        break;
       }
     }
     if(!isUpper)
