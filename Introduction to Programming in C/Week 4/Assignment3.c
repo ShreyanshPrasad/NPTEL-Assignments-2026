@@ -13,8 +13,9 @@ int checkAnagram(char w1[], char w2[]) {
     }
 
     for (int i = 0; i < 256; i++) {
-        if (freq[i] != 0)
+        if (freq[i] != 0) {
             return 0;
+        }
     }
 
     return 1; 
