@@ -2,23 +2,22 @@
 #include <string.h>
 
 int checkAnagram(char w1[], char w2[]) {
-    int freq[256] = {0};
+    int freq[26] = {0};
 
     for (int i = 0; w1[i] != '\0'; i++) {
-        freq[(unsigned char)w1[i]]++;
+        freq[w1[i] - 'A']++;
     }
 
     for (int i = 0; w2[i] != '\0'; i++) {
-        freq[(unsigned char)w2[i]]--;
+        freq[w2[i] - 'A']--;
     }
 
-    for (int i = 0; i < 256; i++) {
-        if (freq[i] != 0) {
+    for (int i = 0; i < 26; i++) {
+        if (freq[i] != 0)
             return 0;
-        }
     }
 
-    return 1; 
+    return 1;
 }
 
 int main() {
