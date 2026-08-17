@@ -17,7 +17,7 @@ int checkAnagram(char w1[], char w2[]) {
             return 0;
     }
 
-    return 1;
+    return 1; 
 }
 
 int main() {
