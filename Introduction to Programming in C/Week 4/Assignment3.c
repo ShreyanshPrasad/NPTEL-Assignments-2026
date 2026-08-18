@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int checkAnagram(char w1[], char w2[]) {
+int checkAnagram(char w1[], char w2[], int n) {
     int freq[26] = {0};
 
-    for (int i = 0; w1[i] != '\0'; i++) {
+    for (int i = 0; i < n; i++) {
         freq[w1[i] - 'A']++;
     }
 
-    for (int i = 0; w2[i] != '\0'; i++) {
+    for (int i = 0; i < n; i++) {
         freq[w2[i] - 'A']--;
     }
 
@@ -28,9 +28,9 @@ int main() {
     scanf("%s", w1);
     scanf("%s", w2);
 
-    if (strlen(w1) == strlen(w2)) {
-        isAnagram = checkAnagram(w1, w2);
-    }
+    if (strlen(w1) == strlen(w2) && strlen(w1) == n)
+        isAnagram = checkAnagram(w1, w2, n);
+
 
     printf("%d", isAnagram);
 
